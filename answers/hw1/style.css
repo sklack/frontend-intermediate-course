@@ -8,12 +8,14 @@ body {
 }
 
 .blackBackground {
+    position: fixed;
+    top: 0px;
+    left: 0px;
     height: 100%;
     width: 100%;
     background-color: black;
     opacity:0.5;
     z-index:-500;
-    display: inline-block;
 }
 
 .container {
@@ -60,22 +62,17 @@ body {
 .streamerInfo {
     width: 75%;
     height: 100%;
-    background-color: green;
+    background-color: black;
     float: left;
 }
 
+.streamerInfo p {
+    margin: 10px;
+    position: relative;
+    text-align: initial;
+}
         
 span {
     height: 80px;
     width: 250px;
-}
-
-h1 {
-    color: white;
-    text-align: center;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
 }
