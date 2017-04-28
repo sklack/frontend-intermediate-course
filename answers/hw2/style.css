@@ -19,11 +19,9 @@ body {
 }
 
 .container {
-    position: relative;
-    left: 10%;
-    right: 10%;
-    height: 100%;
-    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 
