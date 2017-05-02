@@ -28,9 +28,14 @@ body {
   margin-bottom: 15px;
   float: left;
 }
+.model :hover {
+  transition-delay: 1s;
+  transition-duration: 3s;
+  filter: brightness(150%);
+  box-shadow: 0 0 50px #333;
+}
 .screen img {
   width: 100%;
-  position: relative;
 }
 .streamerTitle {
   background: rgba(0,0,0,0.8);

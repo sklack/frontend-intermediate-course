@@ -21,16 +21,23 @@ body
     justify-content: space-around
     width: 1000px
 
-.model
+.model {
     position: relative
     width: 300px
     display: inline-block
     margin-bottom: 15px
     float: left
 
+    :hover {
+    transition-delay: 1s;
+    transition-duration: 3s;
+        filter: brightness(150%);
+        box-shadow: 0 0 50px #333;
+    }
+}
+
 .screen img
     width: 100%
-    position: relative
 
 .streamerTitle
     background: rgba(0, 0, 0, 0.8)
@@ -39,24 +46,27 @@ body
     display: flex
     align-items: center
 
-.streamerImg
+.streamerImg {
     width: 50px
     height: 50px
     overflow: hidden
     border-radius: 50%
     margin: 10px
 
-.streamerImg img
-    width: 100%
-
-.streamerInfo 
+    img {
+        width: 100%
+    }
+}
+   
+.streamerInfo {
     width: 75%
     white-space: nowrap
     overflow: hidden    
     text-overflow: ellipsis
+    p {
+       margin: 10px
+    }
+}
 
-
-.streamerInfo p 
-    margin: 10px
 
        
