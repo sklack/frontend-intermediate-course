@@ -29,6 +29,10 @@ body {
   float: left;
 }
 .model :hover {
+  filter: brightness(150%);
+  box-shadow: 0 0 50px #333;
+}
+.model #delayHover:hover {
   transition-delay: 1s;
   transition-duration: 3s;
   filter: brightness(150%);
