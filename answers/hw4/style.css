@@ -24,8 +24,9 @@ body {
   position: relative;
   width: 300px;
   display: inline-block;
-  margin-bottom: 15px;  
-  transition: all 0.2s ease-in;
+  margin-bottom: 15px;
+  transition-delay: 1s;
+  transition-duration: 3s;
 }
 .model :hover {
   filter: brightness(150%);
