@@ -1,17 +1,19 @@
 $(document).ready(function(){
-    loadData(getData);
+    loadData(getData, 'zh-tw');
 });
 
 let nowIndex = 0;
 let isloading = false;
-function loadData(cb) {
+function loadData(cb, language) {
     const client_id = 'd6ehon1psz22cgp54b2svg81cimy3v';
     const limit = 20;
     isloading = true;
+    console.log('https://api.twitch.tv/kraken/streams?game=League%20of%20Legends&limit='
+        + limit + "&language=" + language + '&client_id=' + client_id + "&offset=" + nowIndex);
     $.ajax({
         type: 'GET',
         url: 'https://api.twitch.tv/kraken/streams?game=League%20of%20Legends&limit='
-        + limit + '&client_id=' + client_id + "&offset=" + nowIndex,
+        + limit + "&language=" + language + '&client_id=' + client_id + "&offset=" + nowIndex,
         success: (response) => {
             console.log(response);
             cb(null, response);
@@ -64,3 +66,9 @@ $(window).scroll(function(){
         }
     }
 })
+
+function changeLang(lang) {
+    $('.container').empty();
+    $('.title').html(`<h1>`+ window.I18N[lang].TITLE +`</h1>`);
+    loadData(getData, lang);
+}
